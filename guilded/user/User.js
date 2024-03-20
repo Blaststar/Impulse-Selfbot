@@ -69,7 +69,7 @@ class User {
             }, function(err, res, body) {
               if (err) reject(err.message);
               if (!res) reject("Missing response");
-              if (res.statusCode != 200) reject(body);
+              if (res.statusCode != 200 || !JSON.stringify(body).includes("user")) reject(body);
               return resolve(JSON.parse(body));
             });
             
