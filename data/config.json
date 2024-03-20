@@ -1,0 +1,9 @@
+{
+    "version": "1.0",
+    "client": {
+        "cookie": "YOUR_ACCOUNT_COOKIE",
+        "userId": "YOUR_USER_ID",
+        "clientId": ""
+    },
+    "prefix": "."
+}
