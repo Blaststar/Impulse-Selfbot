@@ -6,3 +6,4 @@
 Impulse Selfbot
 </h1>
 <br>
+<p align="center"><i>Impulse is a free open source selfbot that has an advanced command handler, and API wrapper to make your own custom commands!</i></p>
