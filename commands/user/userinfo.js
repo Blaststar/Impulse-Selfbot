@@ -37,7 +37,7 @@ module.exports = {
             if (about === null) {
                 about = "None";
             } else {
-                about = data.aboutInfo.bio;
+                about = data.aboutInfo.bio || data.aboutInfo.tagLine;
             }
             if (pfp === null) {
                 pfp = "https://cdn.discordapp.com/attachments/898733028606611477/1219813720385917018/profile_4.png?ex=660cab0d&is=65fa360d&hm=851a125a511a205bf29e697f7275fff124c0d6d26afbb9b71891cba779f7a237&";
