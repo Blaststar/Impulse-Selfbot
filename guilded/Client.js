@@ -4,8 +4,7 @@ const EventEmitter = require("events").EventEmitter;
 const User = require("./user/User");
 
 
-function formatJsonMessage(raw)
-{
+function formatJsonMessage(raw) {
   let data = Buffer.from(raw).toString();
   let split = data.split("");
   if (!isNaN(split[0])) data = data.replace(split[0], "");
