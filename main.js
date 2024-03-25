@@ -25,8 +25,7 @@ const light = new Map()
 .set("cyan", "\x1b[96m")
 .set("gray", "\x1b[39m");
 
-function getTime()
-{
+function getTime() {
   const date = new Date();
   var hours = moment(date).hours();
   var minutes = moment(date).minutes();
