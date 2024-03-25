@@ -30,10 +30,8 @@ function searchMentions(parsed) {
   return result;
 }
 
-class Client extends EventEmitter
-{
-    constructor(config)
-    {
+class Client extends EventEmitter {
+    constructor(config) {
       super();
       this.config = config;
       this.cookie = config.client.cookie;
