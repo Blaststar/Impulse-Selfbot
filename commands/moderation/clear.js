@@ -1,6 +1,6 @@
 module.exports = { 
     name: "clear",
-    description: "Clears given amount of messages",
+    description: "Clears given amount of messages you sent",
     execute(channelId, message, args) {
         var { Message, MessageEmbed } = require("../../guilded");
         var config = require("../../data/config.json");
@@ -30,7 +30,7 @@ module.exports = {
 
         if(isNaN(amount) || Number(amount) > 100 || Number(amount) < 1) return msg.send(null, example);
 
-        msg.delete().then(() => {
+        msg.delete(500).then(() => {
             msg.getMessages(amount).then((messages) => {
                 msg.send(null, embed).then((data) => {
                     var count = 0;
@@ -55,12 +55,13 @@ module.exports = {
                                 });
                             });
                         } else {
+                            if (m.createdBy != config.client.userId) return i++;
                             m = new Message(channelId, m.id, config);
                             m.delete().then(() => {
                                 count++
                             }).catch((e) => {
-                                clearInterval(interval);
-                                msg.send("Unable to clear messages...");
+                                console.log(e);
+                                return;
                             });
                             i++;
                         }
