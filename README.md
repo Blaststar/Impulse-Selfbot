@@ -8,6 +8,10 @@ Impulse Selfbot
 <br>
 <p align="center"><i>Impulse is a free open source selfbot for Guilded.gg written in Node.js that has an advanced command handler, and API wrapper to make your own custom commands!</i></p>
 
+## ⚠️Don't know how to get your account Cookie?
+
+Watch this video https://www.youtube.com/watch?v=mqn861c4uLI
+
 ## 🔔Have a suggestion or need help?
 
 Feel free to join our [Guilded](https://www.guilded.gg/i/2ODojJXk) server!
